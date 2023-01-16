@@ -1,10 +1,4 @@
 
-if game:GetService("CoreGui"):FindFirstChild("NOOB HUB") then
-
-   game:GetService("CoreGui"):FindFirstChild("NOOB HUB"):Destroy()
-
-end
-
 local UILib = loadstring(game:HttpGet('https://raw.githubusercontent.com/kickTh/New-Ui/main/ABC_Ui.txt'))()
 
 local win = UILib:Window("K HUB",Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightControl)
