@@ -41,3 +41,64 @@ btns:Button("WalkSpeed", function()
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
 
 end)
+if game:GetService("CoreGui"):FindFirstChild("NOOB HUB") then
+
+   game:GetService("CoreGui"):FindFirstChild("NOOB HUB"):Destroy()
+
+end
+
+local UILib = loadstring(game:HttpGet('https://raw.githubusercontent.com/kickTh/New-Ui/main/ABC_Ui.txt'))()
+
+local win = UILib:Window("K HUB",Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightControl)
+
+local MainSection = win:Tab("Main")
+
+MainSection:Button("Interact", function()
+
+for i,v in pairs(game:GetService("Workspace"):GetDescendants())do
+
+    if v.Name == "ProximityPrompt" then
+
+        fireproximityprompt(v,20)
+
+    end
+
+end
+
+end)
+
+MainSection:Button("InfiniteJump", function()
+
+local InfiniteJumpEnabled = true
+
+game:GetService("UserInputService").JumpRequest:connect(function()
+
+    if InfiniteJumpEnabled then
+
+        game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+
+    end
+
+end)
+
+end)
+
+MainSection:Button("WalkSpeed", function()
+
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+
+end)
+
+local Settings = win:Tab("Settings")
+
+Settings:Label("UI Toggle Key:  Right-Ctrl")
+
+Settings:Label("Credit : k X HUB")
+
+Settings:Button("Copy Discord Invite", function()
+
+    setclipboard("https://discord.gg/ev2EFua3fr")
+
+    UILib:Notification("Notification", "Copied!", "Okay")
+
+end)
