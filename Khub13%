@@ -1,46 +1,4 @@
-local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/kickTh/New-Ui/main/discord%20lib%20(1).txt")()
 
-local win = DiscordLib:Window("k hub")
-
-local serv = win:Server("Main", "")
-
-local btns = serv:Channel("ควยไรไม่รู้")
-
-btns:Button("Interact", function()
-
-for i,v in pairs(game:GetService("Workspace"):GetDescendants())do
-
-    if v.Name == "ProximityPrompt" then
-
-        fireproximityprompt(v,20)
-
-    end
-
-end
-
-end)
-
-btns:Button("InfiniteJump", function()
-
-local InfiniteJumpEnabled = true
-
-game:GetService("UserInputService").JumpRequest:connect(function()
-
-    if InfiniteJumpEnabled then
-
-        game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
-
-    end
-
-end)
-
-end)
-
-btns:Button("WalkSpeed", function()
-
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
-
-end)
 if game:GetService("CoreGui"):FindFirstChild("NOOB HUB") then
 
    game:GetService("CoreGui"):FindFirstChild("NOOB HUB"):Destroy()
